@@ -5,7 +5,7 @@ import { Chart } from "react-google-charts";
 const Homepage = () => {
  return (
   <div>
-   <h1 class="text-center">Welcome to the Homepage</h1>
+   <h1 className="text-center">Welcome to the Homepage</h1>
    <Chart
     chartType="ScatterChart"
     data={[
