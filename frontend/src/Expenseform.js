@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import ExpenseFormData from "./ExpenseFormData";
 
 const Expenseform = () => {
  /*
@@ -33,6 +34,9 @@ TODO: The infoexpense data needs to be configured and displayed as such:
   phonenumber: "",
  });
 
+ //storing submitted data from forn
+ const [data, setData] = useState([]);
+
  // records the changes aka events in the input fields and selection field and stores them in setInfoExpense
  const handleChange = (e) => {
   setInfoExpense({ ...infoExpense, [e.target.name]: e.target.value });
@@ -42,6 +46,17 @@ TODO: The infoexpense data needs to be configured and displayed as such:
  const handleSubmit = (e) => {
   e.preventDefault();
   console.log(infoExpense);
+
+  //spread data creates a new array and adds new data to the info expense
+  setData([...data, infoExpense]);
+
+  // text boxes are empty so user can enter new data
+  setInfoExpense({
+   selection: "",
+   name: "",
+   email: "",
+   phonenumber: "",
+  });
  };
 
  return (
@@ -93,6 +108,7 @@ TODO: The infoexpense data needs to be configured and displayed as such:
      <button>Submit Contact</button>
     </div>
    </form>
+   <ExpenseFormData data={data} />
   </div>
  );
 };
