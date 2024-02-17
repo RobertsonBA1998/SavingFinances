@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./Header";
 import Homepage from "./Homepage";
-
+import Expenseform from "./Expenseform";
 const App = () => {
  return (
   <BrowserRouter>
@@ -11,6 +11,7 @@ const App = () => {
    <Routes>
     <Route path="/" element={<Homepage />}></Route>
    </Routes>
+   <Expenseform />
   </BrowserRouter>
  );
 };
