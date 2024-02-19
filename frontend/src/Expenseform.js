@@ -108,7 +108,7 @@ TODO: The infoexpense data needs to be configured and displayed as such:
      <button>Submit Contact</button>
     </div>
    </form>
-   <ExpenseFormData data={data} />
+   <ExpenseFormData data={data} setData={setData} />
   </div>
  );
 };
